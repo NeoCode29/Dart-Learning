@@ -1,42 +1,37 @@
 class person {
+  // atribute
   String nama = "";
   int umur = 0;
   String gender = "";
 
-  // membuat construktor harus sesuai dengan nama class
-  // contoh membuat construktor :
+  // construktor
   person(String namaOrang, int umurOrang, String genderOrang) {
-    // // namaOrang , umurOrang, genderOrang adalah parameter
     nama = namaOrang;
     umur = umurOrang;
     gender = genderOrang;
   }
 
+  // method
   void perkenalan() {
     print(
         "Halo, nama saya $nama, saya berumur $umur tahun, dan saya adalah seorang $gender");
   }
+
+  void identitas() {
+    print("nama : $nama");
+    print("umur : $umur");
+    print("gender : $gender");
+  }
 }
 
 void main() {
-  // // tanpa construktor
-  // var adel = person();
-  // var nuril = person();
+  // membuat object
+  var kresna = person("kresna", 18, "laki-laki");
 
-  // adel.nama = "adel";
-  // adel.umur = 20;
-  // adel.gender = "wanita";
-  // adel.perkenalan();
+  // kresna.nama = "kresna";
+  // kresna.umur = 18;
+  // kresna.gender = "pria";
 
-  // nuril.nama = "nuril";
-  // nuril.perkenalan();
-
-  // print(nuril.nama);
-
-  // // dengan construktor
-  var adel = person("adel", 18, "wanita");
-  adel.perkenalan();
-
-  var nuril = person("nuril", 18, "wanita");
-  nuril.perkenalan();
+  kresna.identitas();
+  kresna.perkenalan();
 }

@@ -31,25 +31,3 @@ class Stack {
   }
 }
 
-class PostfixToInfix {
-  String postfixExp = "";
-
-  String toInfix(String postfixExp) {
-    var stack = Stack();
-    for (var ch in postfixExp.split('')) {
-      if (_isOperator(ch)) {
-        var operand2 = stack.pop();
-        var operand1 = stack.pop();
-        var result = '($operand1$ch$operand2)';
-        stack.push(result);
-      } else {
-        stack.push(ch);
-      }
-    }
-    return stack.pop();
-  }
-
-  bool _isOperator(String ch) {
-    return ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^';
-  }
-}

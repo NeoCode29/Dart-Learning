@@ -1,58 +1,40 @@
 void main() {
-  // // membuat list buah
-  List buah = ["apel", "mangga", "pisang", "durian", 78];
-  // // index :  0        1         2          3
+  String nama = "kresna";
+  int umur = 18;
+  bool isMenikah = false;
 
-  // print(buah);
-  // print(buah[0]);
-  // print(buah[3]);
-  // print("aku makan " + buah[1] + " dan " + buah[2]);
-  // print(buah[4]);
+  // tanpa menggunakan generic type sehingga tipe data element dapat berbeda
+  List identitas = ["kresna", 18, false];
+  List hewan = ["harimau", "singa", "ular"];
 
-  // //  untuk memanggil atau menggunaakn element dalam list kita menggunakan perintah
-  // // nama_list[ index ];
+  // // dengan menggunakan generic type sehingga tipe data element harus sama
+  List<String> buah = ["pisang", "mangga", "jeruk"];
+  List<int> nilaiUjian = [34, 65, 80, 75];
+  // //   index        :  0  , 1 , 2, 3
 
-  List<String> hewan = ["ular", "buaya", "singa"];
-  // //   ^
-  // //   |
-  // // generic type ( ciri ciranya diampit dengan tanda < dan >)
+  // // properti list
+  // print(buah.length);
+  // print(buah.reversed);
+  // print(buah.first);
+  // print(nilaiUjian.first);
 
-  List<int> nilaiUjian = [67, 75, 80, 81];
+  // print(buah[1]);
+  // print(nilaiUjian[3] + nilaiUjian[1]);
 
-  // print(nilaiUjian[0] + nilaiUjian[1]);
+  // // menampilkan semua isi list
+  print(buah);
 
-  // // menambahkan element di list menggunakan method add
-  // // ketika menambah elemen akan berada dismping kanan
-  // nilaiUjian.add(90);
-  // hewan.add("kucing");
-  // hewan.add("gajah");
+  // // mengganti element  list
+  // buah[1] = "durian";
+  // buah[0] = "apel";
 
-  // print(nilaiUjian);
-  // print(hewan);
+  // // menambahkan data ke list
+  // buah.add("kelengkeng");
+  // buah.add("anggur");
 
-  // // menghapus element terakihi menggunakan removeLast
-  // nilaiUjian.removeLast();
+  // menghapus element di list
+  buah.remove("mangga");
+  buah.removeAt(0);
 
-  // // menghapus element bedasrakan index menggunakan removeAt
-  // nilaiUjian.removeAt(1);
-
-  // // menghapus element dgn menyebutkan secara langsung menggunakan remove
-  // nilaiUjian.remove(80);
-
-  // hewan.removeAt(1);
-
-  print(nilaiUjian);
-  print(hewan);
-
-  // print(hewan.length);
-  // print(hewan.reversed);
-  // print(hewan.first);
-  // print(hewan.firstOrNull);
-  // print(hewan.isNotEmpty);
-  // print(hewan.isEmpty);
-
-  // menampilkan satu persatu element di list
-  for (String element in hewan) {
-    print("hewan " + element);
-  }
+  print(buah);
 }
