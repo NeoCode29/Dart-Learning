@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Stack {
   // atribute _item digunakan untuk menyimpan stack
   List<String> _items = [];
@@ -126,9 +128,8 @@ class NotationConversion {
 
 void main() {
   var notasi = NotationConversion();
-  var infix = "(A * B) + C^5";
-  var result = notasi.infixToPostfix(infix);
-  var result2 = notasi.postfixToInfix(result);
 
-  print(result2);
+  stdout.write("Notasi infix : ");
+  String infix = stdin.readLineSync().toString();
+  stdout.write("Notasi postfix : ${notasi.infixToPostfix(infix)}");
 }

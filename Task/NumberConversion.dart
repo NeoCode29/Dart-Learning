@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Stack {
   // atribute _item digunakan untuk menyimpan stack
   List<String> _items = [];
@@ -102,9 +104,11 @@ class Decimal {
 }
 
 void main(List<String> args) {
-  Decimal decimal = Decimal();
+  stdout.write("Masukkan angka desimal : ");
+  int inputUser = int.parse(stdin.readLineSync().toString());
+  Decimal desimal = Decimal();
 
-  print(decimal.toBiner(28));
-  print(decimal.toOctal(28));
-  print(decimal.toHexadecimal(28));
+  print("Hasil nilai biner ${desimal.toBiner(inputUser)}");
+  print("Hasil nilai octal ${desimal.toOctal(inputUser)}");
+  print("Hasil nilai hexadesimal ${desimal.toHexadecimal(inputUser)}");
 }
